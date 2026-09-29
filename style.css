@@ -1,0 +1,88 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 420px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+form { display: flex; flex-direction: column; gap: .25rem; }
+
+label { font-weight: 600; margin-top: .6rem; }
+
+input {
+  padding: .45rem .6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font: inherit;
+}
+
+input:focus {
+  outline: 2px solid #4a90e2;
+  border-color: transparent;
+}
+
+/* El JS pone aria-invalid="true"/"false" en el input */
+input[aria-invalid="true"] {
+  border-color: #e74c3c;
+  background: #fff6f6;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: .85rem;
+  margin: .15rem 0 0;
+  min-height: 1em;
+}
+
+button {
+  margin-top: 1rem;
+  padding: .55rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #2c7be5;
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+button:hover { background: #1a5fc0; }
+
+#resumen {
+  margin-top: 1.5rem;
+  padding: .75rem 1rem;
+  border-radius: 6px;
+  background: #e8f6ee;
+  color: #1a6b3c;
+  white-space: pre-wrap;
+}
+ul { list-style: none; padding: 0; }
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  padding: .5rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: .4rem;
+}
+
+.texto { cursor: pointer; flex: 1; }
+
+li.hecha .texto {
+  text-decoration: line-through;
+  opacity: .5;
+}
+
+button.borrar {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: .3rem .6rem;
+  cursor: pointer;
+}
+
+#formTarea { display: flex; gap: .5rem; margin-bottom: 1rem; }
+#formTarea input { flex: 1; padding: .4rem; }

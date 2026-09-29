@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+    <link rel="stylesheet" href="style.css">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lab DOM</title>
+    </head>
+    <body>
+        // parte 1   El DOM
+
+        <h1 id="titulo">Mi primera pagina dinamica</h1>
+        <ul id="lista"></ul>
+        // parte 2 Eventos
+        <button id="saludar">saludar</button>
+        <form id="formTarea">
+            <input name="tarea" placeholder="Nueva tarea..." autocomplete="off" required>
+            <button type="submit">Agregar</button>
+        </form>
+        <ul id="tareas">
+            <li><span class="texto">Gato</span><button class="borrar">✖</button></li>
+            <li><span class="texto">Perro</span><button class="borrar">✖</button></li>
+            <li><span class="texto">Salamandra</span><button class="borrar">✖</button></li>
+        </ul>
+       // parte 3 Validación de formularios
+       Capa 1: atributos HTML5
+        <form id="registro" novalidate>
+
+            <label for="correo">Correo</label>
+            <input id="correo" name="correo" type="email" required
+            aria-describedby="correo-error">
+            <p id="correo-error" class="error" aria-live="polite"></p>
+
+            <label for="cedula">Cédula</label>
+            <input id="cedula" name="cedula" required
+                pattern="([1-9]|1[0-3]|PE|E|N)-\d{1,4}-\d{1,6}"
+                placeholder="8-123-4567"
+                aria-describedby="cedula-error">
+            <p id="cedula-error" class="error" aria-live="polite"></p>
+
+            <button type="submit">Enviar</button>
+        <div id="resumen"></div>
+        <script src="app.js" defer></script>
+    </body>
+</html>
